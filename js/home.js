@@ -264,7 +264,7 @@ document.getElementById("transaction-container").addEventListener("click", funct
     cardDisplay("transaction-form");
     event.stopPropagation();
     document.getElementById("welcome-message").classList.remove("hidden");
-    document.getElementById("welcome-p").classList.remove("hidden");
+    // document.getElementById("welcome-p").classList.remove("hidden");
 });
 
 
