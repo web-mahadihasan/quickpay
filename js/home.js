@@ -266,11 +266,16 @@ for (const featuresCard of allFeaturesCard) {
     featuresCard.addEventListener("click", function(){
       if (lastClick === null) {
         featuresCard.classList.add("border", "border-[#0874F2]");
+        featuresCard.classList.add("bg-primary-btn", "bg-opacity-5");
         
         lastClick = featuresCard;
       }else{
         lastClick.classList.remove("border", "border-[#0874F2]");
+        lastClick.classList.remove("bg-primary-btn", "bg-opacity-5");
+
+        // add 
         featuresCard.classList.add("border", "border-[#0874F2]");
+        featuresCard.classList.add("bg-primary-btn", "bg-opacity-5");
         lastClick = featuresCard;
         }
     });
