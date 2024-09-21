@@ -33,6 +33,7 @@ document.getElementById("btn-add-money").addEventListener("click", function(even
         alterInfo.innerText = "Add money failed. Invalid bank or PIN number!";
         alertShow("alert");
       }
+
 });
 
 
@@ -165,6 +166,7 @@ document.getElementById("bonus-btn").addEventListener("click", function(event){
 document.getElementById("pay-bill-btn").addEventListener("click", function(event){
     event.preventDefault()
 
+
     let mainBalance = getInnerText("main-balance");
     const inputPayBillAmount = getInputNumberValue("input-pay-bill-amount");
     const inputPayBillPin = getInputTextValue("input-pay-bill-pin");
@@ -210,6 +212,7 @@ document.getElementById("pay-bill-btn").addEventListener("click", function(event
 document.getElementById("add-money-container").addEventListener("click", function(event){
     cardDisplay("add-money-form");
     event.stopPropagation()
+    document.getElementById("welcome-message").classList.add("hidden");
 });
 
 // card 2
@@ -217,6 +220,7 @@ document.getElementById("add-money-container").addEventListener("click", functio
 document.getElementById("cash-out-container").addEventListener("click", function(event){
     cardDisplay("cash-out-form");
     event.stopPropagation();
+    document.getElementById("welcome-message").classList.remove("hidden");
 });
 
 // card 3
@@ -224,6 +228,7 @@ document.getElementById("cash-out-container").addEventListener("click", function
 document.getElementById("transfer-container").addEventListener("click", function(event){
     cardDisplay("transfer-form");
     event.stopPropagation();
+    document.getElementById("welcome-message").classList.remove("hidden");
 });
 
 // card 4
@@ -231,6 +236,7 @@ document.getElementById("transfer-container").addEventListener("click", function
 document.getElementById("bonus-container").addEventListener("click", function(event){
     cardDisplay("bonus-form");
     event.stopPropagation();
+    document.getElementById("welcome-message").classList.remove("hidden");
 });
 
 // card 5
@@ -238,6 +244,7 @@ document.getElementById("bonus-container").addEventListener("click", function(ev
 document.getElementById("pay-bill-container").addEventListener("click", function(event){
     cardDisplay("pay-bill-form");
     event.stopPropagation();
+    document.getElementById("welcome-message").classList.add("hidden");
 });
 
 // card 6
@@ -245,6 +252,7 @@ document.getElementById("pay-bill-container").addEventListener("click", function
 document.getElementById("transaction-container").addEventListener("click", function(event){
     cardDisplay("transaction-form");
     event.stopPropagation();
+    document.getElementById("welcome-message").classList.remove("hidden");
 });
 
 
