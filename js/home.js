@@ -45,6 +45,7 @@ document.getElementById("cashout-btn").addEventListener("click", function(event)
      let mainBalance = getInnerText("main-balance");
     const inputCashoutAmount = getInputNumberValue("input-cashout-amount");
     const inputCashoutPin = getInputTextValue("input-cashout-pin");
+    const inputCashOutAgentNumber = getInputTextValue("cash-out-agent");
 
         if (inputCashoutAmount <= 9) {
           const alterInfo = document.getElementById("alert-info");
@@ -58,7 +59,7 @@ document.getElementById("cashout-btn").addEventListener("click", function(event)
           return alertShow("alert");
         }
 
-        if (inputCashoutPin === demoPin) {
+        if (inputCashoutPin === demoPin && inputCashOutAgentNumber.length === 11) {
           mainBalance = mainBalance - inputCashoutAmount;
           document.getElementById("main-balance").innerText = mainBalance;
           deleteInput("input-cashout-amount");
@@ -70,7 +71,8 @@ document.getElementById("cashout-btn").addEventListener("click", function(event)
           // Create History
 
           const cashOutIcon = document.getElementById("cash-out-icon").src;
-          const cashOutTitle = document.getElementById("cash-out-title").innerText;
+          const cashOutTitle =
+            document.getElementById("cash-out-title").innerText;
 
           historyCreator(cashOutIcon, cashOutTitle, inputCashoutAmount, "-");
         } else {
@@ -88,6 +90,7 @@ document.getElementById("send-money-btn").addEventListener("click", function(eve
     let mainBalance = getInnerText("main-balance");
     const inputTransferMoney = getInputNumberValue("input-transfer-amount");
     const inputTransferPin = getInputTextValue("input-transfer-pin");
+    const inputTransferNumber = getInputTextValue("transfer-money-number");
 
             if (inputTransferMoney <= 9) {
               const alterInfo = document.getElementById("alert-info");
@@ -103,7 +106,7 @@ document.getElementById("send-money-btn").addEventListener("click", function(eve
               return alertShow("alert");
             }
 
-            if (inputTransferPin === demoPin) {
+            if (inputTransferPin === demoPin && inputTransferNumber.length === 11) {
               mainBalance = mainBalance - inputTransferMoney;
               document.getElementById("main-balance").innerText = mainBalance;
               deleteInput("input-transfer-amount");
@@ -117,7 +120,12 @@ document.getElementById("send-money-btn").addEventListener("click", function(eve
               const transferIcon = document.getElementById("transfer-icon").src;
               const transferTitle = "Send Money";
 
-              historyCreator(transferIcon, transferTitle, inputTransferMoney, "-");
+              historyCreator(
+                transferIcon,
+                transferTitle,
+                inputTransferMoney,
+                "-"
+              );
             } else {
               const alterInfo = document.getElementById("alert-info");
               alterInfo.innerText =
@@ -221,6 +229,7 @@ document.getElementById("cash-out-container").addEventListener("click", function
     cardDisplay("cash-out-form");
     event.stopPropagation();
     document.getElementById("welcome-message").classList.remove("hidden");
+    document.getElementById("welcome-p").classList.add("hidden");
 });
 
 // card 3
@@ -229,6 +238,7 @@ document.getElementById("transfer-container").addEventListener("click", function
     cardDisplay("transfer-form");
     event.stopPropagation();
     document.getElementById("welcome-message").classList.remove("hidden");
+    document.getElementById("welcome-p").classList.add("hidden");
 });
 
 // card 4
@@ -237,6 +247,7 @@ document.getElementById("bonus-container").addEventListener("click", function(ev
     cardDisplay("bonus-form");
     event.stopPropagation();
     document.getElementById("welcome-message").classList.remove("hidden");
+    document.getElementById("welcome-p").classList.add("hidden");
 });
 
 // card 5
@@ -253,6 +264,7 @@ document.getElementById("transaction-container").addEventListener("click", funct
     cardDisplay("transaction-form");
     event.stopPropagation();
     document.getElementById("welcome-message").classList.remove("hidden");
+    document.getElementById("welcome-p").classList.add("hidden");
 });
 
 
@@ -260,14 +272,13 @@ document.getElementById("transaction-container").addEventListener("click", funct
 
 let lastClick = null;
 const allFeaturesCard = document.getElementsByClassName("features-card");
-
+let lastTitleClick = null;
 
 for (const featuresCard of allFeaturesCard) {
     featuresCard.addEventListener("click", function(){
       if (lastClick === null) {
         featuresCard.classList.add("border", "border-[#0874F2]");
-        featuresCard.classList.add("bg-primary-btn", "bg-opacity-5");
-        
+        featuresCard.classList.add("bg-primary-btn", "bg-opacity-5");      
         lastClick = featuresCard;
       }else{
         lastClick.classList.remove("border", "border-[#0874F2]");
@@ -278,7 +289,28 @@ for (const featuresCard of allFeaturesCard) {
         featuresCard.classList.add("bg-primary-btn", "bg-opacity-5");
         lastClick = featuresCard;
         }
+
+          const allTitles = featuresCard.children;
+          for (const titles of allTitles) {
+            const title = titles.children[1];
+            if (lastTitleClick === null){
+              title.classList.remove("text-secondary-text2");
+              title.classList.add("text-[#0874F2]");
+              
+              lastTitleClick = title;
+            } else{
+              lastTitleClick.classList.add("text-secondary-text2");
+              lastTitleClick.classList.remove("text-[#0874F2]");
+
+              title.classList.remove("text-secondary-text2");
+              title.classList.add("text-[#0874F2]");
+
+              lastTitleClick = title;
+            }
+          }
     });
+
+    // for title color 
 };
 
 // log out

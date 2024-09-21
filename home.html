@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome Payoo MFS</title>
+    <title>Welcome QuickPay</title>
 
     <!-- DaisyUI & Tailwind link  -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
@@ -107,14 +107,14 @@
                         <section class="bg-white p-4 rounded-b-2xl">
                            <div id="welcome-message" class="">
                             <h1 class="text-2xl font-bold">🔥 Welcome to QuickPay!</h1>
-                            <p class=" text-secondary-text mt-3">Enjoy easy and convenient financial services with us. Cashout charge is low
+                            <p id="welcome-p" class="hidden text-secondary-text mt-3">Enjoy easy and convenient financial services with us. Cashout charge is low
                                 and</p>
                            </div>
                             <!-- features card  -->
                              <div id="features-container" class="grid grid-cols-3 gap-4 mt-4">
                                 <!-- card 1 -->
                                 <div id="add-money-container" class="features-card flex justify-center border border-transparent p-4 shadow-md rounded-2xl cursor-pointer">
-                                    <div class="flex flex-col justify-center items-center text-center">
+                                    <div class="text-container flex flex-col justify-center items-center text-center text-[#0874F2]">
                                         <span>
                                             <img id="add-money-icon" class="w-[25px]" src="./images/wallet.svg" alt="">
                                         </span>
