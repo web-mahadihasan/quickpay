@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome QuickPay</title>
+
+    <!-- DaisyUI & Tailwind link  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- DaisyUI & Tailwind link  -->
+
+    <!-- css style  -->
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- css style  -->
+
+    <!-- tailwind custom style  -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-btn': '#0874F2',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- tailwind custom style  -->
+
+</head>
+
+<body>
+    <!-- Main part  -->
+    <main class="flex justify-center items-center h-screen">
+        <div class="mockup-phone">
+            <div class="camera"></div>
+            <div class="display h-[850px]">
+                <div class="artboard artboard-demo phone-3 bg-[url('/images/login-bg.png')] bg-no-repeat bg-contain bg-[center_top_1rem]  bg-[#F4F5F7] w-[420px!important] rounded-b-3xl h-[100%!important] relative">
+                    <!-- alert part  -->
+                    <header id="alert" class="mb-14 hidden absolute top-[15%] left-15">
+                        <div role="alert" class="alert alert-warning">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 shrink-0 stroke-current" fill="none" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                            </svg>
+                            <span id="alert-info"></span>
+                        </div>
+                    </header>
+                    <!-- alert part  -->
+                    <!-- Log in  -->
+                    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-md">
+                        <form class="card-body">
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="text-base font-medium">Mobile Number</span>
+                                </label>
+                                <input id="input-phone" type="tel" placeholder="Enter your number" class="py-4 px-5 bg-[#F4F5F7] rounded-full " required />
+                            </div>
+                            <div class="form-control">
+                                <label class="">
+                                    <span class="text-base font-medium">4 Digit Pin</span> 
+                                    <p class="text-sm mb-1">eg. enter demo password: 1234</p>
+                                </label>
+                                <input id="input-pin" type="password" placeholder="Enter 4 Digit Pin" class="py-4 px-5 bg-[#F4F5F7] rounded-full " required />
+                                <label class="label">
+                                    <a href="#" class="label-text-alt link link-hover mt-3">Forgot password?</a>
+                                </label>
+                            </div>
+                            <div class="form-control mt-6">
+                                <button id="btn-login" class="btn py-3 px-5 bg-primary-btn rounded-full text-white text-base font-semibold hover:bg-[#444444]">Login</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Log in  -->
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Main part  -->
+
+    <!-- Js file  -->
+     <script src="./js/index.js"></script>
+     <script src="./js/features.js"></script>
+</body>
+
+</html>

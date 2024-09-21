@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Payoo MFS</title>
+
+    <!-- DaisyUI & Tailwind link  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- DaisyUI & Tailwind link  -->
+
+    <!-- css style  -->
+     <link rel="stylesheet" href="styles/style.css">
+    <!-- css style  -->
+
+    <!-- tailwind custom style  -->
+     <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'secondary-text': 'rgba(8, 8, 8, 0.50)',
+                        'secondary-text2': 'rgba(8, 8, 8, 0.70)',
+                        'primary-btn': '#0874F2',
+                        'history-bg': 'rgba(8, 8, 8, 0.05)',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- tailwind custom style  -->
+
+</head>
+<body>
+    <!-- Main part  -->
+     <main class="flex justify-center items-center h-screen">
+        <div class="mockup-phone">
+            <div class="camera"></div>
+            <div class="display h-[850px]">
+                <div class="artboard phone-3 bg-[#F4F5F7] w-[420px!important] rounded-b-3xl h-[100%!important] relative">
+                    <header id="alert" class="mb-14 hidden absolute top-[12%] left-2">
+                        <div role="alert" class="alert alert-warning">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 shrink-0 stroke-current" fill="none" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                            </svg>
+                            <span id="alert-info"></span>
+                        </div>
+                    </header>
+                        <!-- navbar  -->
+                        <div class="flex items-center px-6 pt-7 bg-white border-b">
+                            <div class="flex items-center flex-1">
+                                <!-- profile icon -->
+                                <div class="dropdown">
+                                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+                                        <div class="w-10 rounded-full">
+                                            <img alt="Tailwind CSS Navbar component"
+                                                src="./images/profile.png" />
+                                        </div>
+                                    </div>
+                                    <ul tabindex="0"
+                                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow space-y-2">
+                                        <li><a>Profile</a></li>
+                                        <li><a>Settings</a></li>
+                                        <li><a id="logout-btn">Logout</a></li>
+                                    </ul>
+                                </div>
+                                <!-- Balance   -->
+                                <div class="">
+                                    <div class="stat">
+                                        <div class="stat-title">MeheDi Hasan</div>
+                                        <div class="text-lg font-semibold">Balance: <span id="main-balance">9400</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-none">
+                                <div class="dropdown dropdown-end">
+                                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                                        <div class="indicator">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                                stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                                            </svg>
+                                            <span class="badge badge-sm indicator-item">8</span>
+                                        </div>
+                                    </div>
+                                    <div tabindex="0" class="card card-compact dropdown-content bg-base-100 z-[1] mt-3 w-52 shadow">
+                                        <div class="card-body">
+                                            <span class="flex items-center text-base font-medium"><span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                class="size-4 mr-1 align-middle">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0M3.124 7.5A8.969 8.969 0 0 1 5.292 3m13.416 0a8.969 8.969 0 0 1 2.168 4.5" /></svg></span>No Notification
+                                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- navbar  -->
+                       
+                    <!-- main section  -->
+                     <main class="">
+                        <section class="bg-white p-4 rounded-b-2xl">
+                           <div class="">
+                            <h1 class="text-2xl font-bold">🔥 Welcome to QuickPay!</h1>
+                            <p class=" text-secondary-text mt-3">Enjoy easy and convenient financial services with us. Cashout charge is low
+                                and</p>
+                           </div>
+                            <!-- features card  -->
+                             <div id="features-container" class="grid grid-cols-3 gap-4 mt-4">
+                                <!-- card 1 -->
+                                <div id="add-money-container" class="features-card flex justify-center border border-transparent p-4 shadow-md rounded-2xl cursor-pointer">
+                                    <div class="flex flex-col justify-center items-center text-center">
+                                        <span>
+                                            <img id="add-money-icon" class="w-[25px]" src="./images/wallet.svg" alt="">
+                                        </span>
+                                        <h2 id="add-money-title" class="features-card-title text-secondary-text2">Add Money</h2>
+                                    </div>
+                                </div>
+                                <!-- card 2 -->
+                                <div id="cash-out-container" class="features-card flex justify-center p-4 shadow-md rounded-2xl cursor-pointer  border border-transparent">
+                                    <div class="flex flex-col justify-center items-center text-center">
+                                        <span>
+                                            <img id="cash-out-icon" class="w-[25px]" src="./images/send.svg" alt="">
+                                        </span>
+                                        <h2 id="cash-out-title" class="features-card-title text-secondary-text2">Cashout</h2>
+                                    </div>
+                                </div>
+                                <!-- card 3 -->
+                                <div id="transfer-container" class="features-card flex justify-center p-4 shadow-md rounded-2xl cursor-pointer  border border-transparent">
+                                    <div class="flex flex-col justify-center items-center text-center">
+                                        <span>
+                                            <img id="transfer-icon" class="w-[25px]" src="./images/money.svg" alt="">
+                                        </span>
+                                        <h2 id="transfer-title" class="features-card-title text-secondary-text2">Transfer</h2>
+                                    </div>
+                                </div>
+                                <!-- card 4 -->
+                                <div id="bonus-container" class="features-card flex justify-center p-4 shadow-md rounded-2xl cursor-pointer  border border-transparent">
+                                    <div class="flex flex-col justify-center items-center text-center">
+                                        <span>
+                                            <img id="coupon-icons" class="w-[25px]" src="./images/financial.svg" alt="">
+                                        </span>
+                                        <h2 id="coupon-title" class="features-card-title text-secondary-text2">Get Bonus</h2>
+                                    </div>
+                                </div>
+                                <!-- card 5 -->
+                                <div id="pay-bill-container" class="features-card flex justify-center p-4 shadow-md rounded-2xl cursor-pointer  border border-transparent">
+                                    <div class="flex flex-col justify-center items-center text-center">
+                                        <span>
+                                            <img id="pay-bill-icon" class="w-[25px]" src="./images/purse.svg" alt="">
+                                        </span>
+                                        <h2 class="features-card-title text-secondary-text2">Pay Bill</h2>
+                                    </div>
+                                </div>
+                                <!-- card 6 -->
+                                <div id="transaction-container" class="features-card flex justify-center p-4 shadow-md rounded-2xl cursor-pointer  border border-white">
+                                    <div class="flex flex-col justify-center items-center text-center">
+                                        <span>
+                                            <img class="w-[25px]" src="./images/transaction.svg" alt="">
+                                        </span>
+                                        <h2 class="features-card-title text-secondary-text2">Transactions</h2>
+                                    </div>
+                                </div>
+                             </div>
+                        </section>
+                        <!-- section part two  -->
+                         <section class="px-6 py-4">
+                           <!-- History part -->
+                            <div class="hidden">
+                                <div class="flex justify-between">
+                                    <h3 class="text-lg font-semibold">Latest Payment</h3>
+                                    <button>View All</button>
+                                </div>
+                                <div class="">
+                                    
+                                </div>
+                            </div>
+                           <!-- History part -->
+
+                           <!-- Add Mony part  -->
+                            <div id="add-money-form" class="hidden">
+                                <h3 class="text-lg font-semibold mb-3">Add Money</h3>
+                                <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-md">
+                                    <form class="p-4">
+                                        <div class="form-control">
+                                            <label class="label">
+                                                <span class="text-base font-medium">Mobile Number</span>
+                                            </label>
+                                            <select name="" id="select-bank" class="py-3 px-5 bg-[#F4F5F7] rounded-full " required>
+                                                <option value="" class="text-base" selected disabled>Select back</option>
+                                                <option value="" class="text-base">Dutch-Bangla Bank</option>
+                                                <option value="" class="text-base">Sonali Bank</option>
+                                                <option value="" class="text-base">BRAC Bank</option>
+                                                <option value="" class="text-base">City Bank</option>
+                                                <option value="" class="text-base">IDLC Finance</option>
+                                                <option value="" class="text-base">AB Bank</option>
+                                                <option value="" class="text-base">IFIC Bank</option>
+                                                <option value="" class="text-base">Islami Bank</option>
+                                                <option value="" class="text-base">UCB Bank</option>
+                                                <option value="" class="text-base">Eastern Bank</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-control">
+                                            <label class="label">
+                                                <span class="text-base font-medium">Bank Account Number</span>
+                                            </label>
+                                            <input id="add-money-bank" type="number" placeholder="Enter 11 digit account number" class="py-3 px-5 bg-[#F4F5F7] rounded-full "
+                                                required />
+                                        </div>
+                                        <div class="form-control">
+                                            <label class="label">
+                                                <span class="text-base font-medium">Amount to Add</span>
+                                            </label>
+                                            <input id="input-add-amount" type="number" placeholder="Add Amount to withdraw" class="py-3 px-5 bg-[#F4F5F7] rounded-full "
+                                                required />
+                                        </div>
+                                        <div class="form-control">
+                                            <label class="py-1">
+                                                <span class="text-base font-medium">Pin Number</span>
+                                            </label>
+                                            <input id="add-money-pin" type="password" placeholder="Enter 4 Digit Pin"
+                                                class="py-3 px-5 bg-[#F4F5F7] rounded-full " required />
+                                        </div>
+                                        <div class="form-control mt-6">
+                                            <button id="btn-add-money"
+                                                class="btn py-3 px-5 bg-primary-btn rounded-full text-white text-base font-semibold hover:bg-[#444444]">Add Money</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                           <!-- Add Mony part  -->
+
+                           <!-- Cash out part  -->
+                            <div id="cash-out-form" class="hidden">
+                                <h3 class="text-lg font-semibold mb-4">Cash Out</h3>
+                                <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-md">
+                                    <form class="p-4">
+                                        <div class="form-control">
+                                            <label class="label">
+                                                <span class="text-base font-medium">Agent Number</span>
+                                            </label>
+                                            <input id="cash-out-agent" type="number" placeholder="Enter 11 digit number"
+                                                class="py-3 px-5 bg-[#F4F5F7] rounded-full " required />
+                                        </div>
+                                        <div class="form-control">
+                                            <label class="label">
+                                                <span class="text-base font-medium">Amount</span>
+                                            </label>
+                                            <input id="input-cashout-amount" type="number" placeholder="Enter amount to transfer"
+                                                class="py-3 px-5 bg-[#F4F5F7] rounded-full " required />
+                                        </div>
+                                        <div class="form-control">
+                                            <label class="py-1">
+                                                <span class="text-base font-medium">Pin Number</span>
+                                            </label>
+                                            <input id="input-cashout-pin" type="password" placeholder="Enter 4 Digit Pin"
+                                                class="py-3 px-5 bg-[#F4F5F7] rounded-full " required />
+                                        </div>
+                                        <div class="form-control mt-6">
+                                            <button id="cashout-btn" class="btn py-3 px-5 bg-primary-btn rounded-full text-white text-base font-semibold hover:bg-[#444444]">Cash Out</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                           <!-- Cash out part  -->
+
+                           <!-- Transfer Money part  -->
+                            <div id="transfer-form" class="hidden">
+                                <h3 class="text-lg font-semibold mb-4">Transfer Money</h3>
+                                <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-md">
+                                    <form class="p-4">
+                                        <div class="form-control">
+                                            <label class="label">
+                                                <span class="text-base font-medium">User Account Number</span>
+                                            </label>
+                                            <input id="transfer-money-number" type="number" placeholder="Enter 11 digit number"
+                                                class="py-3 px-5 bg-[#F4F5F7] rounded-full " required />
+                                        </div>
+                                        <div class="form-control">
+                                            <label class="label">
+                                                <span class="text-base font-medium">Amount</span>
+                                            </label>
+                                            <input id="input-transfer-amount" type="number" placeholder="Enter amount to transfer"
+                                                class="py-3 px-5 bg-[#F4F5F7] rounded-full " required />
+                                        </div>
+                                        <div class="form-control">
+                                            <label class="py-1">
+                                                <span class="text-base font-medium">Pin Number</span>
+                                            </label>
+                                            <input id="input-transfer-pin" type="password" placeholder="Enter 4 Digit Pin"
+                                                class="py-3 px-5 bg-[#F4F5F7] rounded-full " required />
+                                        </div>
+                                        <div class="form-control mt-6">
+                                            <button id="send-money-btn"
+                                                class="btn py-3 px-5 bg-primary-btn rounded-full text-white text-base font-semibold hover:bg-[#444444]">Send Now</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                           <!-- Transfer Money part  -->
+
+                           <!-- Get coupon part  -->
+                            <div id="bonus-form" class="hidden">
+                                <h3 class="text-lg font-semibold mb-4">Get Bonus</h3>
+                                <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-md">
+                                    <form class="p-4">
+                                        <div class="form-control">
+                                            <label class="">
+                                                <span class="text-base font-medium">Enter Bonus Coupon</span>
+                                                <p class="text-sm mb-1">eg. Demo coupon: WIN100</p>
+                                            </label>
+                                            <input id="input-coupon" type="text" placeholder="Enter coupon number"
+                                                class="py-3 px-5 bg-[#F4F5F7] rounded-full " required />
+                                        </div>
+                                        <div class="form-control mt-6">
+                                            <button id="bonus-btn"
+                                                class="btn py-3 px-5 bg-primary-btn rounded-full text-white text-base font-semibold hover:bg-[#444444]">Get Bonus</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                           <!-- Get coupon part  -->
+
+                            <!-- Pay bill part  -->
+                            <div id="pay-bill-form" class="hidden">
+                                <h3 class="text-lg font-semibold mb-3">Pay Bill</h3>
+                                <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-md">
+                                    <form class="p-4">
+                                        <div class="form-control">
+                                            <label class="label">
+                                                <span class="text-base font-medium">Select To Pay</span>
+                                            </label>
+                                            <select name="" id="select-pay-bill" class="py-3 px-5 bg-[#F4F5F7] rounded-full " required>
+                                                <option value="" class="text-base" selected disabled>Select</option>
+                                                <option value="Electricity Bill" class="text-base">Electricity Bill</option>
+                                                <option value="Education Bill" class="text-base">Education Bill</option>
+                                                <option value="Internet Bill" class="text-base">Internet Bill</option>
+                                                <option value="NESCO/DESCO Bill" class="text-base">NESCO/DESCO Bill</option>
+                                                <option value="Govt. Bill" class="text-base">Govt. Bill</option>
+                                                <option value="Credit Card bills" class="text-base">Credit Card bills</option>
+                                                <option value="Gas Bill" class="text-base">Gas Bill</option>
+                                                <option value="Water and telephone bills" class="text-base">Water and telephone bills</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-control">
+                                            <label class="label">
+                                                <span class="text-base font-medium">Biller Account Number</span>
+                                            </label>
+                                            <input id="input-pay-bill-account" type="number" placeholder="Enter account number"
+                                                class="py-3 px-5 bg-[#F4F5F7] rounded-full " required />
+                                        </div>
+                                        <div class="form-control">
+                                            <label class="label">
+                                                <span class="text-base font-medium">Amount to Add</span>
+                                            </label>
+                                            <input id="input-pay-bill-amount" type="number" placeholder="Add Amount to withdraw"
+                                                class="py-3 px-5 bg-[#F4F5F7] rounded-full " required />
+                                        </div>
+                                        <div class="form-control">
+                                            <label class="py-1">
+                                                <span class="text-base font-medium">Pin Number</span>
+                                            </label>
+                                            <input id="input-pay-bill-pin" type="password" placeholder="Enter 4 Digit Pin"
+                                                class="py-3 px-5 bg-[#F4F5F7] rounded-full " required />
+                                        </div>
+                                        <div class="form-control mt-6">
+                                            <button id="pay-bill-btn"
+                                                class="btn py-3 px-5 bg-primary-btn rounded-full text-white text-base font-semibold hover:bg-[#444444]">Pay Now</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- Pay bill part  -->
+
+                            <!-- Transaction part  -->
+                                <div id="transaction-form" class="">
+                                    <h3 class="text-lg font-semibold mb-3">Pay Bill</h3>
+                                    <div id="history-container" class="space-y-2">
+                                        <div class="flex justify-between items-center bg-white p-4 rounded-xl">
+                                            <div class="flex items-center gap-4">
+                                                <img src="./images/wallet.svg" alt="" class="bg-history-bg p-2 rounded-full">
+                                                <div>
+                                                    <h4>Electricity Bill</h4>
+                                                    <p class="text-xs text-secondary-text">Today 01:44 AM</p>
+                                                </div>
+                                            </div>
+                                            <div class = "flex items-center">
+                                                <p class="font-bold text-lg mr-2 text-orange-600"> - 1000</p>
+                                                <img src="./images/3dot.svg" alt="" class="p-2 rounded-full hover:bg-history-bg duration-300">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <!-- Transaction part  -->
+                         </section>
+                        <!-- section part two  -->
+                     </main>
+                    <!-- main section  -->
+                </div>
+            </div>
+        </div>
+     </main>
+    <!-- Main part  -->
+
+    <script src="./js/features.js"></script>
+    <script src="./js/home.js"></script>
+</body>
+</html>
